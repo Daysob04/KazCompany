@@ -1,0 +1,867 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+
+h1 { font-size: 2.5em;}
+h2 { font-size: 2em;}
+h3 { font-size: 1.2em;}
+p { font-size: 1em;}
+ul { list-style: none;}
+li { font-size: 1.1em;}
+
+
+button {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: rgb(175, 75, 25);
+    transition: 2s;
+}
+
+button:hover {
+    background-color: rgb(140, 59, 18);
+    transform:scale(1.1);
+}
+
+
+.container {
+    max-width: 950px;
+    margin: auto;
+}
+
+
+header {
+    background-color: rgb(245, 245, 245);
+    height: 8vh;
+}
+
+
+img {
+    position: relative;
+    top: -20px;
+    left: -20px;
+    height: 14vh;
+    width: 20vh;
+}
+
+
+.mega-menu {
+    width: 90%;
+    margin: 0 auto;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    --img1: scale(1);
+    --img2: scale(0);
+
+}
+
+
+.mega-menu:has(.dropdown:target ) {
+    --img1: scale(0);
+    --img2: scale(1);
+    --clip: inset(0 0 0 0);
+}
+
+
+
+.size-5 {
+    position: relative;
+    top: -85px;
+    left: 316px;
+    height: 3vh;
+    color: rgb(157, 87, 87);
+
+    transform: var(--img1);
+}
+
+
+.size-6 {
+    position: relative;
+    top: -85px;
+    left: 5px;
+    height: 3vh;
+    color: rgb(157, 87, 87);
+
+    transform: var(--img2);
+}
+
+
+.dropdown {
+    position: absolute;
+    background-color: rgb(51, 59, 83);
+    width: 70%;
+    max-width: 300px;
+    right: 0;
+    top: 40px;
+    bottom: 350px;
+
+    padding: .6em;
+    display: grid;
+    align-content: center;
+    gap: -0.2rem;
+
+    overflow-y: auto;
+
+    clip-path: var(--clip, inset(0 0 100% 100%));
+    transition: clip-path .5s;
+}
+
+
+.dropdown_list {
+    list-style:none;
+}
+
+.dropdown_link {
+    color: rgb(255, 209, 153);
+    padding: 1em .7em;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+
+.size-7 {
+    height: 4vh;
+}
+
+.dropdown_inicio {
+    position: relative;
+    top: 3px;
+}
+
+
+#hero {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)
+    )
+    ,url("media/imagen-numeros.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+    animation: cambiar-imagen 17s infinite alternate;
+
+}
+
+
+@keyframes cambiar-imagen {
+    0% {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.85)
+            rgba(0, 0, 0, 0.85),
+        )
+        ,url("media/imagen-numeros.jpg");
+
+    }
+
+    50% {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)
+        )
+        ,url("media/imagen3-mano.jpg");
+       
+    }
+
+
+    100% {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.85)
+        )
+        ,url("media/imagen-numeros.jpg");
+    }
+}
+
+
+#hero h1 {
+    color: rgb(255, 255, 255);
+}
+
+
+#desarrollo .container {
+    text-align: center;
+    padding: 180px 12px;
+    background-color: rgb(255, 253, 253);
+}
+
+.colordesa {
+    background: linear-gradient(rgb(255, 0, 0), rgb(0, 0, 0), rgb(0, 4, 255));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: aqua;
+}
+
+#desarrollo1 {
+    background-color: rgb(5, 39, 60);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    
+}
+
+#desarrollo1 .container {
+    display: flex;
+    padding: 50px 0px;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.carta1 figure {
+    height: 90px;
+}
+
+.carta1 figure img {
+   top: 5px;
+   left: 0px;
+}
+
+.carta1 {
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(237, 28, 28, 0.6);
+    width: 290px;
+    transition: all 400ms ease;
+    overflow: hidden;
+    padding-bottom: 76px;
+    background: rgb(228, 219, 219);
+    view-timeline-name: --card1;
+    view-timeline-axis: block;
+
+    animation-timeline: --card1;
+    animation-name: show;
+
+    animation-range: entry 25% cover 55%;
+    animation-fill-mode: both;
+}
+
+
+/*.carta1:hover {
+    box-shadow: 5px 5px 20px rgba(237, 28, 28, 0.4);
+    transform: translateY(-3%);
+}*/
+
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+
+.carta2 figure {
+    height: 90px;
+}
+
+.carta2 figure img {
+    height: 110px;
+    top: 5px;
+    left: -10px;
+}
+
+.carta2 {
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(237, 28, 28, 0.6);
+    width: 290px;
+    transition: all 400ms ease;
+    overflow: hidden;
+    padding-bottom: 58px;
+    background: rgb(228, 219, 219);
+    view-timeline-name: --card2;
+    view-timeline-axis: block;
+
+    animation-timeline: --card2;
+    animation-name: show;
+
+    animation-range: entry 25% cover 55%;
+    animation-fill-mode: both;
+}
+
+/*.carta2:hover {
+    box-shadow: 5px 5px 20px rgba(237, 28, 28, 0.4);
+    transform: translateY(-3%);
+}*/
+
+
+
+.carta3 figure {
+    height: 90px;
+}
+
+.carta3 figure img {
+    top: 5px;
+    left: -2px;
+}
+
+.carta3 {
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(237, 28, 28, 0.6);
+    width: 290px;
+    transition: all 400ms ease;
+    overflow: hidden;
+    padding-bottom: 40px;
+    background: rgb(228, 219, 219);
+    view-timeline-name: --card3;
+    view-timeline-axis: block;
+
+    animation-timeline: --card3;
+    animation-name: show;
+
+    animation-range: entry 25% cover 55%;
+    animation-fill-mode: both;
+}
+
+/*.carta3:hover {
+    box-shadow: 5px 5px 20px rgba(237, 28, 28, 0.4);
+    transform: translateY(-3%);
+}*/
+
+
+
+.carta4 figure {
+    height: 90px;
+}
+
+.carta4 figure img {
+    height: 85px;
+    width: 100px;
+    top: 5px;
+    left: 2px;
+}
+
+.carta4 {
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(237, 28, 28, 0.6);
+    width: 290px;
+    transition: all 400ms ease;
+    overflow: hidden;
+    padding-bottom: 42px;
+    background: rgb(228, 219, 219);
+    view-timeline-name: --card4;
+    view-timeline-axis: block;
+
+    animation-timeline: --card4;
+    animation-name: show;
+
+    animation-range: entry 25% cover 55%;
+    animation-fill-mode: both;
+}
+
+/*.carta4:hover {
+    box-shadow: 5px 5px 20px rgba(237, 28, 28, 0.4);
+    transform: translateY(-3%);
+}*/
+
+
+
+.carta5 figure {
+    height: 90px;
+}
+
+.carta5 figure img {
+    top: 5px;
+    left: 4px;
+}
+
+.carta5 {
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(237, 28, 28, 0.6);
+    width: 290px;
+    transition: all 400ms ease;
+    overflow: hidden;
+    padding-bottom: 27px;
+    background: rgb(228, 219, 219);
+    view-timeline-name: --card5;
+    view-timeline-axis: block;
+
+    animation-timeline: --card5;
+    animation-name: show;
+
+    animation-range: entry 25% cover 55%;
+    animation-fill-mode: both;
+}
+
+/*.carta5:hover {
+    box-shadow: 5px 5px 20px rgba(237, 28, 28, 0.4);
+    transform: translateY(-3%);
+}*/
+
+
+
+.carta6 figure {
+    height: 90px;
+}
+
+.carta6 figure img {
+    height: 90px;
+    width: 110px;
+    top: 5px;
+    left: 4px;
+}
+
+.carta6 {
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(237, 28, 28, 0.6);
+    width: 290px;
+    transition: all 400ms ease;
+    overflow: hidden;
+    padding-bottom: 10px;
+    background: rgb(228, 219, 219);
+    view-timeline-name: --card6;
+    view-timeline-axis: block;
+
+    animation-timeline: --card6;
+    animation-name: show;
+
+    animation-range: entry 25% cover 55%;
+    animation-fill-mode: both;
+}
+
+/*.carta6:hover {
+    box-shadow: 5px 5px 20px rgba(237, 28, 28, 0.4);
+    transform: translateY(-3%);
+}*/
+
+
+
+.carta7 figure {
+    height: 90px;
+}
+
+.carta7 figure img {
+    top: 5px;
+    left: 1px;
+}
+
+.carta7 {
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(237, 28, 28, 0.6);
+    width: 290px;
+    transition: all 400ms ease;
+    overflow: hidden;
+    padding-bottom: 72px;
+    background: rgb(228, 219, 219);
+    view-timeline-name: --card7;
+    view-timeline-axis: block;
+
+    animation-timeline: --card7;
+    animation-name: show;
+
+    animation-range: entry 25% cover 55%;
+    animation-fill-mode: both;
+}
+
+/*.carta7:hover {
+    box-shadow: 5px 5px 20px rgba(237, 28, 28, 0.4);
+    transform: translateY(-3%);
+}*/
+
+
+
+.carta8 figure {
+    height: 90px;
+}
+
+.carta8 figure img {
+    top: 5px;
+    left: 2px;
+}
+
+.carta8 {
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(237, 28, 28, 0.6);
+    width: 290px;
+    transition: all 400ms ease;
+    overflow: hidden;
+    padding-bottom: 72px;
+    background: rgb(228, 219, 219);
+    view-timeline-name: --card8;
+    view-timeline-axis: block;
+
+    animation-timeline: --card8;
+    animation-name: show;
+
+    animation-range: entry 25% cover 55%;
+    animation-fill-mode: both;
+}
+
+/*.carta8:hover {
+    box-shadow: 5px 5px 20px rgba(237, 28, 28, 0.4);
+    transform: translateY(-3%);
+}*/
+
+
+
+#historia .container {
+    text-align: center;
+    padding: 180px 17px;
+    background-color: rgb(255, 253, 253);
+}
+
+
+
+#nuestra-experiencia {
+    background-color: rgb(52, 52, 56);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    
+}
+
+#nuestra-experiencia .container {
+    display: flex;
+    padding: 50px 0px;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.colornues {
+    background: linear-gradient(rgb(255, 255, 255), rgb(255, 0, 0), rgb(255, 204, 0));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: aqua;
+    view-timeline-name: --frasenuestra;
+    view-timeline-axis: block;
+
+    animation-timeline: --frasenuestra;
+    animation-name: show1;
+
+    animation-range: entry 20% cover 45%;
+    animation-fill-mode: both;
+}
+
+
+@keyframes show1 {
+    from {
+        opacity: 0;
+        transform: translateX(-250px);
+        scale: 20%;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+        scale: 100%;
+    }
+}
+
+
+.carta9 figure {
+    height: 90px;
+}
+
+.carta9 figure img {
+   top: 5px;
+   left: 0px;
+}
+
+.carta9 {
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(237, 28, 28, 0.6);
+    width: 290px;
+    transition: all 400ms ease;
+    overflow: hidden;
+    padding-bottom: 40px;
+    background: rgb(246, 248, 251);
+    view-timeline-name: --card9;
+    view-timeline-axis: block;
+
+    animation-timeline: --card9;
+    animation-name: show;
+
+    animation-range: entry 25% cover 55%;
+    animation-fill-mode: both;
+}
+
+.frasemulti {
+    background-color: rgba(99, 193, 243, 0.918);
+}
+
+
+.frasepart {
+    background-color: rgba(99, 193, 243, 0.918);
+}
+
+.frasecerti {
+    background-color: rgba(99, 193, 243, 0.918);
+}
+
+
+
+
+#porque-nosotros {
+    background-color: rgb(243, 239, 239);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    
+}
+
+#porque-nosotros .container {
+    display: flex;
+    padding: 50px 0px;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.colorporque {
+    background: linear-gradient(rgb(255, 0, 0), rgb(0, 0, 0), rgb(0, 4, 255));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: aqua;
+    view-timeline-name: --porque;
+    view-timeline-axis: block;
+
+    animation-timeline: --porque;
+    animation-name: show2;
+
+    animation-range: entry 20% cover 50%;
+    animation-fill-mode: both;
+}
+
+
+.carta10 figure {
+    height: 90px;
+}
+
+.carta10 figure img {
+   top: 5px;
+   left: 0px;
+}
+
+.carta10 {
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(15, 42, 194, 0.8);
+    width: 290px;
+    transition: all 400ms ease;
+    overflow: hidden;
+    padding-bottom: 40px;
+    background: rgb(249, 250, 252);
+    view-timeline-name: --card10;
+    view-timeline-axis: block;
+
+    animation-timeline: --card10;
+    animation-name: show3;
+
+    animation-range: entry 20% cover 50%;
+    animation-fill-mode: both;
+}
+
+
+@keyframes show2 {
+    from {
+        opacity: 0;
+        transform:translatey(-200px);
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateY(-20px);
+        scale: 100%;
+    }
+}
+
+
+@keyframes show3 {
+    from {
+        opacity: 0;
+        transform:translateX(250px);
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateY(20px);
+        scale: 100%;
+    }
+}
+
+
+
+#suma-proyectos {
+    color:rgb(255, 255, 255);
+    /*color: rgb(255, 204, 0);*/
+    font-weight: 200;
+    text-align: center;
+    background-image: linear-gradient(
+        0deg,
+        rgba(1, 5, 10, 0.8),
+        rgba(1, 5, 10, 0.8)
+    )
+    ,url("media/imagen1-numeros.jpg");
+    background-position: center center;
+    
+}
+
+#suma-proyectos .container {
+    padding: 30px 0px;
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contador {
+    font-size: 1em;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: brown;
+    margin: 20px 80px;
+}
+
+.contador_cantidad {
+    font-size: 3em;
+    font-weight: 300;
+}
+
+
+@keyframes contar {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ocultar {
+    opacity: 0;
+}
+
+.animar {
+    animation: contar 1.4s;
+}
+
+
+
+
+#scrollBtn {
+    display: none;
+    position: fixed; /* Posición fija */
+    bottom: 45px; /* A 30px del borde inferior */
+    right: 9px; /* A 30px del borde derecho */
+    z-index: 99; /* Asegura que esté encima de otros elementos */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno al hacer clic */
+    background-color: #81433c; /* Color de fondo */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cursor de mano */
+    width: 45px; /* Ancho */
+    height: 45px; /* Alto */
+    border-radius: 7px; /* Bordes redondeados */
+    font-size: 25px; /* Tamaño de la flecha */
+    text-align: center; /* Centra la flecha */
+
+    transform: scale(1);
+}
+
+
+.size-8 {
+    position: fixed;
+    height: 3vh;
+    right: 12px;
+    top: 13px;
+}
+
+
+
+#final {
+    background-color: rgb(239, 239, 239);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1px;
+    
+}
+
+#final .container {
+    justify-content: center;
+    align-items: center;
+}
+
+
+.siguenos {
+    position: relative;
+    font-size: 18px;
+    left: -115px;
+    top: 50px;
+}
+
+.icono-face {
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 25px;
+    color: #3b5998;
+    left: -48px;
+    top: 8px;
+}
+
+
+.icono-twit {
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 26px;
+    color: #000000;
+    width: 60px;
+    top: -20px;
+    left: -7px;
+}
+
+.icono-link {
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 26px;
+    color: #0A66C2;
+    width: 60px;
+    top: -48px;
+    left: 40px;
+}
+
+.copia {
+    text-align: end;
+    padding: 0 5px;
+}
