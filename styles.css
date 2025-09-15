@@ -81,7 +81,7 @@ img {
 .size-5 {
     position: relative;
     top: -85px;
-    left: 320px;
+    left: 323px;
     height: 3vh;
     color: rgb(157, 87, 87);
 
@@ -592,7 +592,7 @@ img {
 }
 
 
-@keyframes show1 {
+/*@keyframes show1 {
     from {
         opacity: 0;
         transform: translateX(-250px);
@@ -604,7 +604,7 @@ img {
         transform: translateX(0px);
         scale: 100%;
     }
-}
+}*/
 
 
 .carta9 figure {
