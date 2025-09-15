@@ -80,7 +80,7 @@ img {
 
 .size-5 {
     position: relative;
-    top: -85px;
+    top: -87px;
     left: 320px;
     height: 3vh;
     color: rgb(157, 87, 87);
@@ -91,8 +91,8 @@ img {
 
 .size-6 {
     position: relative;
-    top: -85px;
-    left: 7px;
+    top: -86px;
+    left: 6px;
     height: 3vh;
     color: rgb(157, 87, 87);
 
@@ -163,7 +163,8 @@ img {
     background-size: cover;
     background-position: center center;
     
-    animation: cambiar-imagen 16s infinite alternate;
+    -webkit-animation: cambiar-imagen 16s  infinite alternate;
+    animation: cambiar-imagen 16s  infinite alternate;
 
 }
 
@@ -182,8 +183,41 @@ img {
     50% {
         background-image: linear-gradient(
             0deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.75)
+        )
+        ,url("media/imagen3-mano.jpg");
+       
+    }
+
+
+    100% {
+        background-image: linear-gradient(
+            0deg,
             rgba(0, 0, 0, 0.7),
             rgba(0, 0, 0, 0.7)
+        )
+        ,url("media/imagen-numeros.jpg");
+    }
+}
+
+
+@-webkit-keyframes cambiar-imagen {
+    0% {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.7)
+            rgba(0, 0, 0, 0.7),
+        )
+        ,url("media/imagen-numeros.jpg");
+
+    }
+
+    50% {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.75)
         )
         ,url("media/imagen3-mano.jpg");
        
@@ -260,6 +294,16 @@ img {
 
     animation-range: entry 25% cover 55%;
     animation-fill-mode: both;
+
+
+    -webkit-view-timeline-name: --card1;
+    -webkit-view-timeline-axis: block;
+
+    -webkit-animation-timeline: --card1;
+    animation-name: show;
+
+    -webkit-animation-range: entry 25% cover 55%;
+    -webkit-animation-fill-mode: both;
 }
 
 
@@ -270,6 +314,19 @@ img {
 
 
 @keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+
+@-webkit-keyframes show {
     from {
         opacity: 0;
         scale: 25%;

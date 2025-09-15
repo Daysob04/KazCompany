@@ -1,1 +1,1 @@
-#kazwork
+#kazJob
