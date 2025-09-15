@@ -65,3 +65,25 @@ mybutton.onclick = function() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+
+
+const elements = document.querySelectorAll('#porque-nosotros');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Agrega la clase para activar la animación CSS cuando es visible
+      entry.target.classList.add('.carta10');
+    } else {
+      // Opcional: remueve la clase cuando sale de la vista para la animación inversa
+      entry.target.classList.remove('.carta10');
+    }
+  });
+}, {
+  threshold: 0.2 // Umbral: 20% del elemento visible para activar
+});
+
+elements.forEach(element => {
+  observer.observe(element);
+});
