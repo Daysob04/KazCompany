@@ -65,3 +65,21 @@ mybutton.onclick = function() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+
+
+
+
+/*const elementosAObservar = document.querySelectorAll('.carta10');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animar1'); // Añade una clase CSS con la animación
+    } else {
+      entry.target.classList.remove('animar1'); // Opcional: elimina la clase para revertir al hacer scroll hacia arriba
+    }
+  });
+}, { threshold: 0.2 }); // Ejecuta la función cuando el 10% del elemento es visible
+
+elementosAObservar.forEach(elemento => observer.observe(elemento));*/

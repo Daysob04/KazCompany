@@ -50,7 +50,7 @@ header {
 img {
     position: relative;
     top: -20px;
-    left: -20px;
+    left: -25px;
     height: 14vh;
     width: 20vh;
 }
@@ -80,7 +80,7 @@ img {
 
 .size-5 {
     position: relative;
-    top: -83px;
+    top: -85px;
     left: 320px;
     height: 3vh;
     color: rgb(157, 87, 87);
@@ -91,8 +91,8 @@ img {
 
 .size-6 {
     position: relative;
-    top: -83px;
-    left: 8px;
+    top: -85px;
+    left: 7px;
     height: 3vh;
     color: rgb(157, 87, 87);
 
@@ -106,7 +106,7 @@ img {
     width: 70%;
     max-width: 300px;
     right: 0;
-    top: 43px;
+    top: 44px;
     bottom: 338px;
 
     padding: .6em;
@@ -673,13 +673,13 @@ img {
     overflow: hidden;
     padding-bottom: 40px;
     background: rgb(249, 250, 252);
-    view-timeline-name: --card10;
-    view-timeline-axis: block;
+     view-timeline-name: --card10;
+    view-timeline-axis: scroll;
 
     animation-timeline: --card10;
     animation-name: show3;
 
-    animation-range: entry 20% cover 50%;
+    animation-range: 20% 50%;
     animation-fill-mode: both;
 }
 
@@ -712,8 +712,6 @@ img {
         scale: 100%;
     }
 }
-
-
 
 #suma-proyectos {
     color:rgb(255, 255, 255);
