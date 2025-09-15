@@ -101,13 +101,13 @@ img {
 
 
 .dropdown {
-    position: absolute;
+    position: fixed;
     background-color: rgb(51, 59, 83);
-    width: 70%;
+    width: 65%;
     max-width: 300px;
     right: 0;
-    top: 40px;
-    bottom: 350px;
+    top: 42px;
+    bottom: 345px;
 
     padding: .6em;
     display: grid;
@@ -163,7 +163,7 @@ img {
     background-size: cover;
     background-position: center center;
     
-    animation: cambiar-imagen 17s infinite alternate;
+    animation: cambiar-imagen 15s infinite alternate;
 
 }
 
@@ -172,8 +172,8 @@ img {
     0% {
         background-image: linear-gradient(
             0deg,
-            rgba(0, 0, 0, 0.85)
-            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.7)
+            rgba(0, 0, 0, 0.7),
         )
         ,url("media/imagen-numeros.jpg");
 
@@ -182,8 +182,8 @@ img {
     50% {
         background-image: linear-gradient(
             0deg,
-            rgba(0, 0, 0, 0.8),
-            rgba(0, 0, 0, 0.8)
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
         )
         ,url("media/imagen3-mano.jpg");
        
@@ -193,8 +193,8 @@ img {
     100% {
         background-image: linear-gradient(
             0deg,
-            rgba(0, 0, 0, 0.85),
-            rgba(0, 0, 0, 0.85)
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
         )
         ,url("media/imagen-numeros.jpg");
     }
@@ -673,21 +673,34 @@ img {
     overflow: hidden;
     padding-bottom: 40px;
     background: rgb(249, 250, 252);
-    view-timeline-name: --card10;
-    view-timeline-axis: block;
-
-    animation-timeline: --card10;
-    animation-name: show3;
-
-    animation-range: entry 20% cover 50%;
-    animation-fill-mode: both;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+        .carta10 {
+            animation: show2;
+            animation-fill-mode: both;
+            animation-timeline: scroll();
+            animation-range: 20% 50%;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+        .carta10 {
+            animation-name: show2;
+            animation-fill-mode: both;
+            animation-timeline: view();
+            animation-range: 20% 50%;
+        }
+    }
+}
 
 @keyframes show2 {
     from {
         opacity: 0;
-        transform:translatey(-200px);
+        transform:translatey(-180px);
         scale: 25%;
     }
 
