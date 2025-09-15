@@ -70,6 +70,7 @@ mybutton.onclick = function() {
 
 
 
+
 /*const elementosAObservar = document.querySelectorAll('.carta10');
 
 const observer = new IntersectionObserver((entries) => {

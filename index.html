@@ -6,6 +6,7 @@
     <title>Kaz-consulting</title>
     <script src="https://kit.fontawesome.com/55b3e7651e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -113,7 +114,7 @@
     <section id="desarrollo1">
         <div class="container">
             
-            <div class="carta1" id="animado1">
+            <div class="carta1" data-aos="zoom-in-up">
                 <figure>
                     <img src="media/qlikview_01.jpg" alt="">
                 </figure>
@@ -319,6 +320,16 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            disable: false,
+            offset: 200
+
+        });
+    </script>
 
 </body>
 </html>
