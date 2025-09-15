@@ -49,10 +49,10 @@ header {
 
 img {
     position: relative;
-    top: -20px;
-    left: -20px;
-    height: 14vh;
-    width: 20vh;
+    top: -32px;
+    left: -36px;
+    height: 18vh;
+    width: 25vh;
 }
 
 
@@ -80,8 +80,8 @@ img {
 
 .size-5 {
     position: relative;
-    top: -85px;
-    left: 316px;
+    top: -108px;
+    left: 322px;
     height: 3vh;
     color: rgb(157, 87, 87);
 
@@ -91,8 +91,8 @@ img {
 
 .size-6 {
     position: relative;
-    top: -85px;
-    left: 5px;
+    top: -109px;
+    left: 10px;
     height: 3vh;
     color: rgb(157, 87, 87);
 
@@ -106,8 +106,8 @@ img {
     width: 65%;
     max-width: 300px;
     right: 0;
-    top: 42px;
-    bottom: 345px;
+    top: 44px;
+    bottom: 338px;
 
     padding: .6em;
     display: grid;
