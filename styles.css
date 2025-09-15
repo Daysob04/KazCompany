@@ -49,10 +49,10 @@ header {
 
 img {
     position: relative;
-    top: -32px;
-    left: -36px;
-    height: 18vh;
-    width: 25vh;
+    top: -20px;
+    left: -20px;
+    height: 14vh;
+    width: 20vh;
 }
 
 
@@ -80,8 +80,8 @@ img {
 
 .size-5 {
     position: relative;
-    top: -108px;
-    left: 322px;
+    top: -83px;
+    left: 320px;
     height: 3vh;
     color: rgb(157, 87, 87);
 
@@ -91,8 +91,8 @@ img {
 
 .size-6 {
     position: relative;
-    top: -109px;
-    left: 10px;
+    top: -83px;
+    left: 8px;
     height: 3vh;
     color: rgb(157, 87, 87);
 
@@ -103,10 +103,10 @@ img {
 .dropdown {
     position: absolute;
     background-color: rgb(51, 59, 83);
-    width: 65%;
+    width: 70%;
     max-width: 300px;
     right: 0;
-    top: 44px;
+    top: 43px;
     bottom: 338px;
 
     padding: .6em;
