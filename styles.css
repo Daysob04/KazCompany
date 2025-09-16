@@ -6,6 +6,7 @@
 body {
     font-family:'Times New Roman', Times, serif;
     margin: 0;
+    overflow-x: hidden;
 }
 
 
@@ -80,8 +81,8 @@ img {
 
 .size-5 {
     position: relative;
-    top: -85px;
-    left: 323px;
+    top: -87px;
+    left: 325px;
     height: 3vh;
     color: rgb(157, 87, 87);
 
@@ -112,7 +113,6 @@ img {
     padding: .6em;
     display: grid;
     align-content: center;
-    gap: -0.2rem;
 
     overflow-y: auto;
 
@@ -267,6 +267,10 @@ img {
     gap: 40px;
     justify-content: center;
     align-items: center;
+}
+
+.phrase1 {
+    font-size: 1.3em;
 }
 
 .carta1 figure {
@@ -551,10 +555,13 @@ img {
 
 
 
+
+
 #historia .container {
     text-align: center;
     padding: 180px 17px;
     background-color: rgb(255, 253, 253);
+    font-size: 1.3em;
 }
 
 
@@ -699,7 +706,8 @@ img {
     overflow: hidden;
     padding-bottom: 40px;
     background: rgb(249, 250, 252);
-     view-timeline-name: --card10;
+
+    view-timeline-name: --card10;
     view-timeline-axis: scroll;
 
     animation-timeline: --card10;
@@ -710,7 +718,7 @@ img {
 }
 
 
-@keyframes show2 {
+/*@keyframes show2 {
     from {
         opacity: 0;
         transform:translatey(-180px);
@@ -722,10 +730,10 @@ img {
         transform: rotateY(-20px);
         scale: 100%;
     }
-}
+}*/
 
 
-@keyframes show3 {
+/*@keyframes show3 {
     from {
         opacity: 0;
         transform:translateX(250px);
@@ -737,7 +745,7 @@ img {
         transform: rotateY(20px);
         scale: 100%;
     }
-}
+}*/
 
 #suma-proyectos {
     color:rgb(255, 255, 255);
@@ -870,7 +878,7 @@ hr {
     font-size: 26px;
     color: #000000;
     width: 60px;
-    top: -20px;
+    top: -22px;
     left: -7px;
 }
 
@@ -881,7 +889,7 @@ hr {
     font-size: 26px;
     color: #0A66C2;
     width: 60px;
-    top: -48px;
+    top: -52px;
     left: 40px;
 }
 
