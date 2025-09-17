@@ -163,6 +163,7 @@ img {
     background-position: center center;
     
     animation: cambiar-imagen 16s  infinite alternate;
+    -webkit-animation: cambiar-imagen 16s  infinite alternate;
 
 }
 
@@ -198,6 +199,41 @@ img {
         ,url("media/imagen-numeros.jpg");
     }
 }
+
+
+
+@-webkit-keyframes cambiar-imagen {
+    0% {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.7)
+            rgba(0, 0, 0, 0.7),
+        )
+        ,url("media/imagen-numeros.jpg");
+
+    }
+
+    50% {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.75)
+        )
+        ,url("media/imagen3-mano.jpg");
+       
+    }
+
+
+    100% {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+        )
+        ,url("media/imagen-numeros.jpg");
+    }
+}
+
 
 
 #hero h1 {
