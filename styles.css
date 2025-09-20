@@ -952,7 +952,7 @@ body .Empresa {
 
 
 .fraseempresa {
-    color: #1b2b4f;
+    color: #213259;
 }
 
 /*.btn1-open-modal {
@@ -1095,7 +1095,7 @@ body .Empresa {
     display: block;
     background: #1e232d;
     padding: 18px 46px;
-    top: 815px;
+    top: 855px;
     left: 17px;
     border-radius: 40px;
     text-decoration: none;
@@ -1108,7 +1108,7 @@ body .Empresa {
     display: block;
     background: #1e232d;
     padding: 18px 46px;
-    top: 815px;
+    top: 855px;
     right: 17px;
     border-radius: 40px;
     text-decoration: none;
@@ -1121,7 +1121,7 @@ body .Empresa {
     display: block;
     background: #1e232d;
     padding: 18px 46px;
-    top: 915px;
+    top: 955px;
     left: 17px;
     border-radius: 40px;
     text-decoration: none;
@@ -1134,7 +1134,7 @@ body .Empresa {
     display: block;
     background: #1e232d;
     padding: 18px 39px;
-    top: 915px;
+    top: 955px;
     right: 17px;
     border-radius: 40px;
     text-decoration: none;
@@ -1159,7 +1159,7 @@ body .Empresa {
 
 .modal-container:target {
     display: block;
-    transform: translateY(355px);
+    transform: translateY(330px);
     padding: 0px 1px;
 }
 
@@ -1170,7 +1170,7 @@ body .Empresa {
     text-align: center;
     align-items: center;
     align-content: center;
-    padding: 0px 15px;
+    padding: 0px 20px;
 }
 
 .imgcohete {
@@ -1208,7 +1208,7 @@ body .Empresa {
 
 .modal-container2:target {
     display: block;
-    transform: translateY(410px);
+    transform: translateY(400px);
     padding: 0px 1px;
 }
 
@@ -1260,7 +1260,7 @@ body .Empresa {
 
 .modal-container3:target {
     display: block;
-    transform: translateY(300px);
+    transform: translateY(250px);
     padding: 0px 1px;
     width: 100%;
 }
@@ -1331,7 +1331,7 @@ body .Empresa {
 
 .modal-container4:target {
     display: block;
-    transform: translateY(390px);
+    transform: translateY(360px);
     padding: 0px 1px;
     width: 100%;
 }
@@ -1371,5 +1371,5 @@ body .Empresa {
 
 
 .espacio {
-    padding: 95px 0px;
+    padding: 115px 0px;
 }
