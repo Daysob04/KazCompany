@@ -927,8 +927,8 @@ body .Empresa {
     height: 40vh;
     background-image: linear-gradient(
         0deg,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
     )
     ,url("media/imagen-basedatos.jpg");
     background-repeat: no-repeat;
@@ -1159,7 +1159,7 @@ body .Empresa {
 
 .modal-container:target {
     display: block;
-    transform: translateY(330px);
+    transform: translateY(300px);
     padding: 0px 1px;
 }
 
@@ -1208,7 +1208,7 @@ body .Empresa {
 
 .modal-container2:target {
     display: block;
-    transform: translateY(400px);
+    transform: translateY(360px);
     padding: 0px 1px;
 }
 
@@ -1260,7 +1260,7 @@ body .Empresa {
 
 .modal-container3:target {
     display: block;
-    transform: translateY(250px);
+    transform: translateY(210px);
     padding: 0px 1px;
     width: 100%;
 }
@@ -1331,7 +1331,7 @@ body .Empresa {
 
 .modal-container4:target {
     display: block;
-    transform: translateY(360px);
+    transform: translateY(320px);
     padding: 0px 1px;
     width: 100%;
 }
@@ -1371,5 +1371,5 @@ body .Empresa {
 
 
 .espacio {
-    padding: 110px 0px;
+    padding: 90px 0px;
 }
