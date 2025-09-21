@@ -1160,7 +1160,7 @@ body .Empresa {
 .modal-container:target {
     display: block;
     transform: translateY(120px);
-    padding: 0px 1px;
+    padding: 0px 0px;
 }
 
 .modal-content {
@@ -1208,8 +1208,8 @@ body .Empresa {
 
 .modal-container2:target {
     display: block;
-    transform: translateY(140px);
-    padding: 0px 1px;
+    transform: translateY(190px);
+    padding: 0px 0px;
 }
 
 
@@ -1260,8 +1260,8 @@ body .Empresa {
 
 .modal-container3:target {
     display: block;
-    transform: translateY(15px);
-    padding: 0px 1px;
+    transform: translateY(40px);
+    padding: 0px 0px;
     width: 100%;
 }
 
@@ -1331,8 +1331,8 @@ body .Empresa {
 
 .modal-container4:target {
     display: block;
-    transform: translateY(110px);
-    padding: 0px 1px;
+    transform: translateY(130px);
+    padding: 0px 0px;
     width: 100%;
 }
 
