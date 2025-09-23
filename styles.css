@@ -1435,3 +1435,143 @@ body .Empresa {
     padding: 0 5px;
 }
 
+
+
+
+#hero3 {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 50vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+    )
+    ,url("media/Servicios.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+#nuestros-servicios .container {
+    display: flex;
+    padding: 40px 5px;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 253, 253);
+}
+
+
+.nuestroservi {
+    background: linear-gradient(rgb(29, 111, 162), rgb(195, 68, 9), rgb(2, 2, 2));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /*background: linear-gradient(rgb(255, 200, 0), rgb(236, 59, 98), rgb(141, 248, 239));*/
+}
+
+.fraseservicios {
+    position: relative;
+    top: -20px;
+    color: #213259;
+}
+
+.frases {
+    background-color: rgb(153, 188, 191);
+}
+
+.carta11 figure {
+    height: 90px;
+}
+
+.carta11 figure img {
+   top: 5px;
+   left: 0px;
+}
+
+.carta11 {
+    border-radius: 5px;
+    box-shadow: 2.5px 3px 4px rgba(30, 3, 68, 0.832);
+    width: 290px;
+    transition: all 400ms ease;
+    overflow: hidden;
+    padding-bottom: 40px;
+    padding: 0px 6.3px;
+    background: rgb(240, 213, 170);
+    view-timeline-name: --card9;
+    view-timeline-axis: block;
+
+    animation-timeline: --card9;
+    animation-name: show;
+
+    animation-range: entry 25% cover 55%;
+    animation-fill-mode: both;
+}
+
+
+
+
+#final3 {
+    background-color: rgb(239, 239, 239);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1px;
+    
+}
+
+#final3 .container {
+    justify-content: center;
+    align-items: center;
+}
+
+
+.siguenos3 {
+    position: relative;
+    font-size: 18px;
+    left: -115px;
+    top: 52px;
+}
+
+.icono-face3 {
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 25px;
+    color: #3b5998;
+    left: -48px;
+    top: 8px;
+}
+
+
+.icono-twit3 {
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 26px;
+    color: #000000;
+    width: 60px;
+    top: -23px;
+    left: -7px;
+}
+
+.icono-link3 {
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 26px;
+    color: #0A66C2;
+    width: 60px;
+    top: -54px;
+    left: 40px;
+}
+
+.copia3 {
+    text-align: end;
+    padding: 0 5px;
+}
